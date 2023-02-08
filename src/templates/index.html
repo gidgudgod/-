@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>レストラン</title>
+  </head>
+  <body>
+    <a href="#maincontent" class="skip-link">Skip to Content</a>
+    <div class="announcement">
+      <p class="announcement-content">
+        Big Offers for All Restaurant!
+
+        <a class="announcement-link" href="#"> Learn More &rarr; </a>
+      </p>
+
+      <button aria-label="Close Announcement" class="announcement-close">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+    <nav aria-label="Site Nav" class="nav">
+      <div aria-label="Logo" href="/" class="logo"><span>レストラン</span></div>
+
+      <button aria-label="Hamburger Menu" class="hamburger-menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 256 256"
+          class="hamburger-icon"
+        >
+          <rect width="256" height="256" fill="none"></rect>
+          <line
+            x1="40"
+            y1="128"
+            x2="216"
+            y2="128"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="24"
+          ></line>
+          <line
+            x1="40"
+            y1="64"
+            x2="216"
+            y2="64"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="24"
+          ></line>
+          <line
+            x1="40"
+            y1="192"
+            x2="216"
+            y2="192"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="24"
+          ></line>
+        </svg>
+      </button>
+
+      <ul class="nav-list">
+        <li>
+          <a href="/"> Home </a>
+        </li>
+
+        <li><a href="#"> Favorite </a></li>
+
+        <li>
+          <a href="https://www.linkedin.com/in/gideon-kurniawan-86a44a203/">
+            About Us
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="hero-section">
+      <img
+        src="./images/heros/hero-image_2.jpg"
+        class="hero-image"
+        alt="hero image"
+      />
+      <p class="hero-title">Best Japanese Restaurants in Town.</p>
+    </div>
+    <main id="maincontent">
+      <section class="content">
+        <div class="restaurants">
+          <h1 class="hottest-restaurant">Hottest Restaurant</h1>
+          <div class="restaurant-list">
+            <article class="restaurant">
+              <div class="restaurant-card">
+                <div class="restaurant-photo-wrapper">
+                  <img
+                    src="https://restaurant-api.dicoding.dev/images/medium/41"
+                    class="restaurant-photo"
+                    alt=""
+                  />
+                </div>
+                <h2 class="restaurant-name">Bring Your Phone Cafe</h2>
+                <p class="restaurant-info">
+                  <span>📍 Medan</span> - <span>4.6 ⭐️</span>
+                </p>
+                <p class="restaurant-description">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                  natoque penatibus et magnis dis parturient montes, nascetur
+                  ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+                  eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+                  pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+                  In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+                  justo. Nullam dictum felis eu pede mollis pretium. Integer
+                  tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
+                  vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+                  consequat vitae, eleifend ac, enim. Aliquam lorem ante,
+                  dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                  nulla ut metus varius laoreet.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>© 2023 Copyright: <b>レストラン</b></p>
+    </footer>
+  </body>
+</html>
