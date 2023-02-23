@@ -1,0 +1,341 @@
+h2 {
+  margin-bottom: 12px;
+}
+
+h3 {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.section {
+  margin-bottom: 22px;
+}
+
+.restaurant-detail-container {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  z-index: 4;
+}
+
+.restaurant-detail-main {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.restaurant-detail-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px 0 0 0;
+}
+
+.restaurant-header-background {
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  filter: brightness(40%) blur(3px);
+}
+
+.restaurant-detail-header-desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 10px 6px 10px;
+  gap: 24px;
+}
+
+.restaurant-detail-title {
+  color: white;
+  text-shadow: 2px 2px 4px #1eb854, 0px 0px 5px rgba(0, 0, 0, 0.8),
+    0px 0px 19px rgba(0, 0, 0, 0.5);
+}
+
+.favorite-button {
+  background-color: #141010;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 8px 1px rgba(255, 255, 255, 0.5);
+  transition: transform 0.2s ease-in-out;
+  transition: box-shadow 0.15s ease-in-out;
+  margin-right: 10px;
+}
+
+.favorite-button:hover {
+  background-color: #342a2a;
+}
+
+.favorite-button:focus {
+  box-shadow: 0px 2px 8px 1px rgba(255, 255, 255, 0.7);
+}
+
+.favorite-button:active {
+  animation: zoom-animation 0.3s forwards;
+}
+
+@keyframes zoom-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.favorite-button i {
+  margin-bottom: -2px;
+  color: #1eb854;
+}
+
+.restaurant-detail-photo-wrapper {
+  position: relative;
+  width: 90%;
+  align-self: center;
+  height: 200px;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 6px 8px 1px rgba(255, 255, 255, 0.07);
+}
+
+.restaurant-detail-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  object-position: center;
+}
+
+.restaurant-detail-rating {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 0px 12px 0;
+  background-color: #141010;
+  padding: 6px 10px 6px 7px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+}
+
+.restaurant-detail-body {
+  padding: 0 14px;
+  z-index: 4;
+}
+
+.restaurant-location {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 20px;
+  padding: 0 14px;
+}
+
+.restaurant-address {
+  display: flex;
+  align-items: start;
+  gap: 2px;
+}
+
+.restaurant-detail-description {
+  text-align: left;
+}
+
+.restaurant-menu-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.customer-review-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 14px;
+}
+
+.customer-review {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 0.5px solid rgb(136, 136, 136, 0.2);
+}
+
+.customer-review-header {
+  display: flex;
+  gap: 14px;
+}
+
+.customer-photo-wrapper {
+  position: relative;
+  width: 36px;
+  align-self: center;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 2px 3px 0px rgba(255, 255, 255, 0.045);
+}
+
+.customer-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: center;
+}
+
+.customer-name {
+  font-weight: 700;
+}
+
+.customer-date {
+  color: #b3b3b3;
+}
+
+.customer-text {
+  padding-bottom: 20px;
+  padding-right: 4px;
+}
+
+.image-blurred-edge {
+  box-shadow: 0 0 20px 20px #342a2a inset;
+  z-index: 4px;
+}
+
+#form-add-customer-review {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+.input-text {
+  width: 100%;
+  height: 44px;
+  background-color: #05060f0a;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  transition: border-color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
+    color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
+    background 0.2s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
+}
+
+.form-input-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #e8e7e799;
+  transition: color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
+}
+
+.input-text:hover,
+.input-text:focus,
+.form-input-group:hover .input-text {
+  outline: none;
+  border-color: #1eb854;
+}
+
+.form-input-group:hover label {
+  color: #ffffffc2;
+}
+
+.input-text {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #c5c5c5;
+}
+
+.textarea {
+  min-height: 120px;
+  padding: 1rem 1rem;
+}
+
+#btn-submit-review {
+  width: fit-content;
+  padding: 8px 20px;
+  background-color: #20d65f;
+  transition: all 0.2s ease-in-out 0ms;
+  border-radius: 20px;
+  user-select: none;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  color: #141010;
+  border: none;
+  font-size: 1rem;
+}
+
+#btn-submit-review:hover {
+  background-color: #1eb854;
+  box-shadow: 0px 0px 20px -18px;
+}
+
+#btn-submit-review:active {
+  transform: scale(0.95);
+}
+
+@media screen and (min-width: 376px) {
+  .restaurant-detail-body {
+    padding: 0 20px;
+  }
+  .restaurant-detail-header-desc {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .restaurant-location {
+    padding: 0 20px;
+  }
+
+  .restaurant-detail-photo-wrapper {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .restaurant-detail-main {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 54px;
+    align-items: start;
+    justify-content: center;
+  }
+
+  .restaurant-detail-header {
+    padding-top: 36px;
+  }
+
+  .restaurant-detail-body {
+    padding-top: 36px;
+  }
+
+  .restaurant-detail-photo-wrapper {
+    height: 400px;
+  }
+
+  .restaurant-detail-header-desc {
+    padding-top: 24px;
+  }
+}

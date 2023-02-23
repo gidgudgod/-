@@ -4,12 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="List of Best Japanese Restaurant in your town. Search, Favorite, and Review any Japanese Restaurant available."
+    />
+    <meta name="theme-color" content="#141010" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/x-icon" href="../public/icons/favicon.ico" />
+    <link rel="apple-touch-icon" href="../public/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="./app.webmanifest" />
+    <script src="https://unpkg.com/phosphor-icons"></script>
     <title>レストラン</title>
   </head>
   <body>
@@ -90,10 +99,14 @@
 
       <ul class="nav-list">
         <li>
-          <a href="/"> Home </a>
+          <a href="#/"> Home </a>
         </li>
 
-        <li><a href="#"> Favorite </a></li>
+        <li>
+          <a href="#/restaurant"> Restaurant </a>
+        </li>
+
+        <li><a href="#/favorite"> Favorite </a></li>
 
         <li>
           <a href="https://www.linkedin.com/in/gideon-kurniawan-86a44a203/">
@@ -102,53 +115,8 @@
         </li>
       </ul>
     </nav>
-    <div class="hero-section">
-      <img
-        src="./images/heros/hero-image_2.jpg"
-        class="hero-image"
-        alt="hero image"
-      />
-      <p class="hero-title">Best Japanese Restaurants in Town.</p>
-    </div>
-    <main id="maincontent">
-      <section class="content">
-        <div class="restaurants">
-          <h1 class="hottest-restaurant">Hottest Restaurant</h1>
-          <div class="restaurant-list">
-            <article class="restaurant">
-              <div class="restaurant-card">
-                <div class="restaurant-photo-wrapper">
-                  <img
-                    src="https://restaurant-api.dicoding.dev/images/medium/41"
-                    class="restaurant-photo"
-                    alt=""
-                  />
-                </div>
-                <h2 class="restaurant-name">Bring Your Phone Cafe</h2>
-                <p class="restaurant-info">
-                  <span>📍 Medan</span> - <span>4.6 ⭐️</span>
-                </p>
-                <p class="restaurant-description">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                  natoque penatibus et magnis dis parturient montes, nascetur
-                  ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                  eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-                  pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                  In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
-                  justo. Nullam dictum felis eu pede mollis pretium. Integer
-                  tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
-                  vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
-                  consequat vitae, eleifend ac, enim. Aliquam lorem ante,
-                  dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-                  nulla ut metus varius laoreet.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
+    <div id="loading-page" class="loader"></div>
+    <div id="content"></div>
     <footer>
       <p>© 2023 Copyright: <b>レストラン</b></p>
     </footer>
