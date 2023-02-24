@@ -62,6 +62,8 @@ h3 {
 }
 
 .favorite-button {
+  min-width: 44px;
+  min-height: 44px;
   background-color: #141010;
   border: none;
   border-radius: 50%;
@@ -257,8 +259,9 @@ h3 {
 }
 
 #btn-submit-review {
-  width: fit-content;
   padding: 8px 20px;
+  min-width: 44px;
+  min-height: 44px;
   background-color: #20d65f;
   transition: all 0.2s ease-in-out 0ms;
   border-radius: 20px;
