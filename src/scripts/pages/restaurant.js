@@ -4,7 +4,7 @@ import '../components/restaurant-list';
 const Restaurant = {
   async render() {
     return `
-      <main id="maincontent">
+      <main id="maincontent" tabindex="-1">
         <section class="content">
         <div class="restaurants">
           <restaurant-list></restaurant-list>

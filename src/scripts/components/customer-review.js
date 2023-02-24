@@ -16,13 +16,6 @@ class CustomerReview extends HTMLElement {
   render() {
     this.innerHTML = ` <div class="customer-review">
     <div class="customer-review-header">
-      <div class="customer-photo-wrapper">
-        <img
-          src="https://i.pravatar.cc/300"
-          class="customer-photo"
-          alt="${this._name}"
-        />
-      </div>
       <div>
         <p class="customer-name">${this._name}</p>
         <p class="customer-date">${this._date}</p>

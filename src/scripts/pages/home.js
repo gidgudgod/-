@@ -6,7 +6,7 @@ const Home = {
   async render() {
     return `
       <hero-element></hero-element>
-      <main id="maincontent">
+      <main id="maincontent" tabindex="-1">
         <section class="content">
         <div class="restaurants">
           <h1 class="hottest-restaurant">Hottest Restaurant</h1>

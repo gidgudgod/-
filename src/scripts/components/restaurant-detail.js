@@ -24,7 +24,7 @@ class RestaurantDetail extends HTMLElement {
   }
 
   render() {
-    this.innerHTML = `<div class="restaurant-detail-container" id="maincontent">
+    this.innerHTML = `<div class="restaurant-detail-container" id="maincontent" tabindex="-1">
     <img
       class="restaurant-header-background image-blurred-edge"
       src="${CONFIG.IMAGE_URL.LARGE + this._pictureId}"
