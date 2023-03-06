@@ -46,13 +46,14 @@ class RestaurantDetail extends HTMLElement {
             alt="${this._name}"
           />
           <span class="restaurant-detail-rating" aria-label="rating"
-            ><i class="ph-star-fill"></i><span>${this._rating}</span></span
-          >
+            ><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#d6cbca" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M239.2,97.4A16.4,16.4,0,0,0,224.6,86l-59.4-4.1-22-55.5A16.4,16.4,0,0,0,128,16h0a16.4,16.4,0,0,0-15.2,10.4L90.4,82.2,31.4,86A16.5,16.5,0,0,0,16.8,97.4,16.8,16.8,0,0,0,22,115.5l45.4,38.4L53.9,207a18.5,18.5,0,0,0,7,19.6,18,18,0,0,0,20.1.6l46.9-29.7h.2l50.5,31.9a16.1,16.1,0,0,0,8.7,2.6,16.5,16.5,0,0,0,15.8-20.8l-14.3-58.1L234,115.5A16.8,16.8,0,0,0,239.2,97.4Z"></path></svg>
+            <span>${this._rating}</span>
+          </span>
         </div>
         <div class="restaurant-location">
           <p class="restaurant-address">
-            <i class="ph-map-pin-fill" style="margin-top: 3px"></i
-            ><span
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#d6cbca" viewBox="0 0 256 256" style="margin-top: 3px"><rect width="256" height="256" fill="none"></rect><path d="M128,16a88.1,88.1,0,0,0-88,88c0,75.3,80,132.2,83.4,134.6a8.3,8.3,0,0,0,9.2,0C136,236.2,216,179.3,216,104A88.1,88.1,0,0,0,128,16Zm0,56a32,32,0,1,1-32,32A32,32,0,0,1,128,72Z"></path></svg>
+            <span
               >${this._address}
             </span>
           </p>

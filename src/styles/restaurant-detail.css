@@ -101,7 +101,8 @@ h3 {
   }
 }
 
-.favorite-button i {
+.favorite-button i,
+.favorite-button svg {
   margin-bottom: -2px;
   color: #1eb854;
 }
