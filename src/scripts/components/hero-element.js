@@ -9,11 +9,14 @@ class Hero extends HTMLElement {
   render() {
     this.innerHTML = `
     <div class="hero-section">
-    <img
-      src="./images/heros/hero-image_2.jpg"
+    <picture>
+      <source media="(max-width: 600px)" srcset="./images/heros/hero-image_2-small.jpg" class="hero-image" alt="hero image">
+      <source type="image/webp" srcset="./images/heros/hero-image_2.webp" class="hero-image" alt="hero image">
+      <source type="image/jpeg" srcset="./images/heros/hero-image_2-large.jpg" class="hero-image" alt="hero image">
+      <img src="./images/heros/hero-image_2-large.jpg"
       class="hero-image"
-      alt="hero image"
-    />
+      alt="hero image">
+    </picture>
     <p class="hero-title">Best Japanese Restaurants in Town.</p>
     </div>
     `;

@@ -23,8 +23,8 @@ class RestaurantItem extends HTMLElement {
     <div class="restaurant-card">
       <a href="/#/detail/${this._id}" class="restaurant-photo-wrapper">
         <img
-          src="${CONFIG.IMAGE_URL.LARGE + this._pictureId}"
-          class="restaurant-photo"
+          data-src="${CONFIG.IMAGE_URL.LARGE + this._pictureId}"
+          class="lazyload restaurant-photo"
           alt="${this._name}"
         />
       </a>
