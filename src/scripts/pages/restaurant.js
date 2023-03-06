@@ -1,5 +1,6 @@
 import DicodingRestaurantSource from '../data/dicodingRestaurant-source';
 import '../components/restaurant-list';
+import { createSkeletonRestaurantList } from '../utils/skeleton-restaurant-item-template';
 
 const Restaurant = {
   async render() {
@@ -17,7 +18,7 @@ const Restaurant = {
   async afterRender() {
     const restaurantListElement = document.querySelector('restaurant-list');
     try {
-      const loadingElement = "<div class='loader' style='margin: 20% auto;'></div>";
+      const loadingElement = createSkeletonRestaurantList();
       restaurantListElement.innerHTML = loadingElement;
       const restaurants = await DicodingRestaurantSource.restaurants();
       restaurantListElement.restaurants = restaurants;

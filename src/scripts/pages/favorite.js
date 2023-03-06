@@ -1,32 +1,16 @@
-import '../components/restaurant-list';
 import FavoriteRestaurantIdb from '../data/favorite-restaurant-idb';
+import FavoriteRestaurantView from './favorited-restaurant/favorite-restaurant-view';
+import FavoriteRestaurantPresenter from './favorited-restaurant/favorite-restaurant-presenter';
+
+const view = new FavoriteRestaurantView();
 
 const Favorite = {
   async render() {
-    return `
-      <main id="maincontent" tabindex="-1">
-        <section class="content">
-        <div class="restaurants">
-          <h1 class="favorite-restaurant">Favorite Restaurant</h1>
-          <restaurant-list></restaurant-list>
-        </div>
-        </section>
-      </main>
-    `;
+    return view.getTemplate();
   },
 
   async afterRender() {
-    const restaurantListElement = document.querySelector('restaurant-list');
-    try {
-      const loadingElement = "<div class='loader' style='margin: 20% auto;'></div>";
-      restaurantListElement.innerHTML = loadingElement;
-      const restaurants = await FavoriteRestaurantIdb.getAllRestaurant();
-      restaurantListElement.restaurants = restaurants;
-    } catch (error) {
-      console.error(error);
-      const errorElement = "<div class='error-request-text'>Failed to Get Data</div>";
-      restaurantListElement.innerHTML = errorElement;
-    }
+    new FavoriteRestaurantPresenter({ view, favoriteRestaurants: FavoriteRestaurantIdb });
   },
 };
 

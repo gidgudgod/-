@@ -11,7 +11,7 @@ class FavoriteButton extends HTMLElement {
 
   render() {
     this.innerHTML = `<button
-    aria-label="favorite this restaurant"
+    aria-label="${!this._isFavorite ? 'favorite this restaurant' : 'unfavorite this restaurant'}"
     type="button"
     class="favorite-button"
   >

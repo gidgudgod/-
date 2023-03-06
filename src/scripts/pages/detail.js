@@ -2,7 +2,8 @@ import DicodingRestaurantSource from '../data/dicodingRestaurant-source';
 import '../components/restaurant-list';
 import '../components/restaurant-detail';
 import UrlParser from '../routes/url-parser';
-import FavoriteButtonInitiator from '../utils/favoriteButton-initiator';
+import FavoriteButtonPresenter from '../utils/favoriteButton-presenter';
+import FavoriteRestaurantIdb from '../data/favorite-restaurant-idb';
 
 const Detail = {
   async render() {
@@ -20,8 +21,9 @@ const Detail = {
       const restaurant = await DicodingRestaurantSource.detailRestaurant(url.id);
       restaurantDetailElement.restaurant = restaurant;
 
-      FavoriteButtonInitiator.init({
+      FavoriteButtonPresenter.init({
         favoriteButtonContainer: document.querySelector('#favoriteButton-container'),
+        favoriteRestaurants: FavoriteRestaurantIdb,
         restaurant: {
           id: restaurant.id,
           name: restaurant.name,
